@@ -1,0 +1,99 @@
+@import "partials/variables.scss";
+
+body {
+  background: $background-primary;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4.875rem;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  h1 {
+    color: $font-primary;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+  }
+  h4 {
+    color: $font-second;
+    font-size: 1em;
+    margin: 0.2rem 0;
+    padding: 0;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: $background-second;
+  width: 100%;
+  margin-top: 6.875rem;
+  padding-top: 0.250rem;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-primary;
+    color: $font-primary;
+    width: 33.19%;
+    height: 20rem;
+    margin-bottom: 0.250rem;
+  }
+  @media (max-width: 915px) {
+    div {
+      width: 49.8%;
+    }
+  }
+  @media (max-width: 720px) {
+    div {
+      width: 100%;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  p {
+    display: flex;
+    align-items: center;
+    img {
+      max-width: 28px;
+    }
+    a {
+      color: $font-primary;
+      text-decoration: none;
+      margin: auto 0.5rem;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Class para adicionar quando houver ações
+.backgroundHeader {
+  background: $font-primary;
+  transition: .4s ease-in-out;
+  h1 {
+    color: $font-second;
+    transition: .4s ease-in-out;
+  }
+  h4 {
+    color: $background-primary;
+    transition: .4s ease-in-out;
+  }
+}
