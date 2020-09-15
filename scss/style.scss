@@ -10,13 +10,14 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 4.875rem;
   padding: 1rem 0;
   position: fixed;
   top: 0;
+  z-index: 50;
   h1 {
     color: $font-primary;
     font-size: 2.5em;
@@ -33,30 +34,63 @@ header {
 
 main {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   background: $background-second;
   width: 100%;
   margin-top: 6.875rem;
   padding-top: 0.250rem;
-  div {
+  .card {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-color: $background-primary;
     color: $font-primary;
+    cursor: pointer;
     width: 33.19%;
     height: 20rem;
     margin-bottom: 0.250rem;
+    padding: 0;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .titleCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, .6);
+      font-size: 2.5em;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .card:hover .titleCard {
+      z-index: 5;
+      opacity: 1;
+      visibility: visible;
+      transition: 0.5s ease-in-out;
+  }
+  @media (min-width: 1920px) {
+    .card {
+      height: 28rem;
+    }
   }
   @media (max-width: 915px) {
-    div {
+    .card {
       width: 49.8%;
     }
   }
   @media (max-width: 720px) {
-    div {
+    .card {
       width: 100%;
     }
   }
@@ -64,14 +98,15 @@ main {
 
 footer {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 10vh;
+  font-weight: bold;
   p {
     display: flex;
     align-items: center;
     img {
-      max-width: 28px;
+      max-width: 1.75rem;
     }
     a {
       color: $font-primary;
@@ -95,5 +130,103 @@ footer {
   h4 {
     color: $background-primary;
     transition: .4s ease-in-out;
+  }
+}
+
+
+//*----------------- Styles das páginas do dia 1 ao 30 ----------------------*//
+
+// Configurações header padrão para as 30 páginas
+header #linkHome {
+  align-self: flex-start;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $font-primary;
+  font-weight: bold;
+  text-decoration: none;
+  img {
+    width: 0.875rem;
+    margin-right: 0.4rem;
+  }
+}
+
+header #linkHome:hover {
+  text-decoration: underline;
+}
+
+//*-------------------------------- Dia 1 -----------------------------------*//
+#dia1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background-primary;
+  height: 76vh;
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    li {
+      list-style: none;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 2rem;
+      transform: rotate(-30deg) skew(25deg);
+      position: relative;
+      span {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.25rem;
+        color: $font-primary;
+        font-size: 1.88em !important;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    li:nth-child(1) span {
+      background: $background-face;
+    }
+    li:nth-child(2) span {
+      background: $background-twitter;
+    }
+    li:nth-child(3) span {
+      background: $background-gmail;
+    }
+    li:nth-child(4) span {
+      background: $background-linkedin;
+    }
+    li:nth-child(5) span {
+      background: $background-insta;
+    }
+    li:hover span {
+      box-shadow: -2px 2px 2px rgba(0, 0, 0, .1);
+    }
+    li:hover span:nth-child(5) {
+      transform: translate(2.5rem, -2.5rem);
+      opacity: 1;
+    }
+    li:hover span:nth-child(4) {
+      transform: translate(1.875rem, -1.875rem);
+      opacity: .8;
+    }
+    li:hover span:nth-child(3) {
+      transform: translate(1.25rem, -1.25rem);
+      opacity: .6;
+    }
+    li:hover span:nth-child(2) {
+      transform: translate(0.625rem, -0.625rem);
+      opacity: .4;
+    }
+    li:hover span:nth-child(1) {
+      transform: translate(0, 0);
+      opacity: .2;
+    }
   }
 }
