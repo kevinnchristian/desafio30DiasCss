@@ -55,7 +55,6 @@ main {
     position: relative;
     img {
       width: 100%;
-      height: 100%;
     }
     .titleCard {
       display: flex;
@@ -137,7 +136,7 @@ footer {
 //*----------------- Styles das páginas do dia 1 ao 30 ----------------------*//
 
 // Configurações header padrão para as 30 páginas
-header #linkHome {
+.headerDias #linkHome {
   align-self: flex-start;
   margin-left: 1rem;
   display: flex;
@@ -152,23 +151,29 @@ header #linkHome {
   }
 }
 
-header #linkHome:hover {
+.headerDias #linkHome:hover {
   text-decoration: underline;
 }
 
-//*-------------------------------- Dia 1 -----------------------------------*//
-#dia1 {
+// Altura e largura padrão da <main> em todas as páginas
+.mainExercicio {
   display: flex;
   align-items: center;
   justify-content: center;
   background: $background-primary;
+  width: 100%;
   height: 76vh;
+}
+
+//*-------------------------------- Dia 1 -----------------------------------*//
+#dia1 {
   ul {
-    display: flex;
+    display: flex !important;
     margin: 0;
     padding: 0;
     position: relative;
     li {
+      display: flex !important;
       list-style: none;
       width: 5rem;
       height: 5rem;
@@ -228,5 +233,56 @@ header #linkHome:hover {
       transform: translate(0, 0);
       opacity: .2;
     }
+  }
+}
+
+
+//*-------------------------------- Dia 2 -----------------------------------*//
+%sizeText-Circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  width: 18.75rem;
+  height: 18.75rem;
+}
+
+.circle {
+  @extend %sizeText-Circle;
+  box-shadow: 0 4px 0 $color-circle;
+  animation: animate 1s linear infinite;
+}
+
+.text {
+  @extend %sizeText-Circle;
+  box-shadow: 0 0 15px rgba(242, 61, 109, 0.5);
+  color: $color-circle;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  p {
+    margin: 0;
+    padding: 0;
+    animation: pulse .8s linear infinite;
+    animation-direction: alternate-reverse;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
