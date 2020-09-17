@@ -88,6 +88,9 @@ main .card:hover .titleCard {
   main .card {
     height: 28rem;
   }
+  main .card img {
+    height: 100%;
+  }
 }
 
 @media (max-width: 915px) {

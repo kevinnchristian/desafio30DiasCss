@@ -81,6 +81,9 @@ main {
   @media (min-width: 1920px) {
     .card {
       height: 28rem;
+      img {
+        height: 100%;
+      }
     }
   }
   @media (max-width: 915px) {
