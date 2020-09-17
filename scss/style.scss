@@ -251,7 +251,7 @@ footer {
 .circle {
   @extend %sizeText-Circle;
   box-shadow: 0 4px 0 $color-circle;
-  animation: animate 1s linear infinite;
+  animation: animateCircle 1s linear infinite;
 }
 
 .text {
@@ -264,12 +264,12 @@ footer {
   p {
     margin: 0;
     padding: 0;
-    animation: pulse .8s linear infinite;
+    animation: pulseText .8s linear infinite;
     animation-direction: alternate-reverse;
   }
 }
 
-@keyframes animate {
+@keyframes animateCircle {
   0% {
     transform: rotate(0deg);
   }
@@ -278,7 +278,7 @@ footer {
   }
 }
 
-@keyframes pulse {
+@keyframes pulseText {
   0% {
     transform: scale(1);
   }
@@ -317,12 +317,12 @@ footer {
       white-space: nowrap;
       position: absolute;
       top: 50%;
-      animation: animate 20s linear infinite;
+      animation: animateText 20s linear infinite;
     }
   }
 }
 
-@keyframes animate {
+@keyframes animateText {
   0% {
     transform: translate(0, -50%);
   }
