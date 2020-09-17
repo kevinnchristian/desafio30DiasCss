@@ -286,3 +286,47 @@ footer {
     transform: scale(1.2);
   }
 }
+
+
+//*-------------------------------- Dia 3 -----------------------------------*//
+#dia3 {
+  section {
+    background: #eaffae;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    .wrapper {
+      background-color: #f55757;
+      border-right: 2px solid $background-primary;
+      color: #eaffae;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .sliding {
+      font-family: "arial black";
+      font-size: 12em;
+      line-height: 13.75rem;
+      overflow: hidden;
+      white-space: nowrap;
+      position: absolute;
+      top: 50%;
+      animation: animate 20s linear infinite;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(0, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
