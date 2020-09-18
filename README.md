@@ -2,6 +2,6 @@
 
 - **Desenvolvido por:** Kevin Christian
 - **Nome do projeto:** 30Dias - CSS
-- **URL do projeto:** https://thirtydias-css.vercel.app/
+- **URL do projeto:** <a target="_blank" rel="noopener noreferrer">https://thirtydias-css.vercel.app/</a>
 - **Tecnologias:** `HTML`, `CSS` e `SASS`
 - **Sobre o projeto:** É um projeto para praticar o `CSS`, e no caso deste usei `SASS` um pré-compilador para trabalhar com `CSS`.
