@@ -25,7 +25,7 @@ header {
     padding: 0;
   }
   h4 {
-    color: $font-second;
+    color: $color-circle;
     font-size: 1em;
     margin: 0.2rem 0;
     padding: 0;
@@ -37,7 +37,6 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: $background-second;
   width: 100%;
   margin-top: 6.875rem;
   padding-top: 0.250rem;
@@ -46,11 +45,13 @@ main {
     align-items: center;
     justify-content: center;
     background-color: $background-primary;
+    border: 2px solid $color-circle;
+    box-sizing: border-box;
     color: $font-primary;
     cursor: pointer;
-    width: 33.19%;
+    width: 33.2%;
     height: 20rem;
-    margin-bottom: 0.250rem;
+    margin-bottom: .2%;
     padding: 0;
     position: relative;
     img {
@@ -80,7 +81,7 @@ main {
   }
   @media (min-width: 1920px) {
     .card {
-      height: 28rem;
+      height: 26rem;
       img {
         height: 100%;
       }
@@ -93,7 +94,12 @@ main {
   }
   @media (max-width: 720px) {
     .card {
+      border-top: 2px solid $color-circle;
+      border-left: none;
+      border-bottom: 2px solid $color-circle;
+      border-right: none;
       width: 100%;
+      margin-bottom: 0;
     }
   }
 }
@@ -121,12 +127,24 @@ footer {
   }
 }
 
+@media (min-width: 1920px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    align-self: center;
+    justify-self: center;
+    max-width: 1920px;
+  }
+}
+
 // Class para adicionar quando houver ações
 .backgroundHeader {
   background: $font-primary;
   transition: .4s ease-in-out;
   h1 {
-    color: $font-second;
+    color: $color-circle;
     transition: .4s ease-in-out;
   }
   h4 {

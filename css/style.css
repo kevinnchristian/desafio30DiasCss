@@ -26,7 +26,7 @@ header h1 {
 }
 
 header h4 {
-  color: #2A678C;
+  color: #F23D6D;
   font-size: 1em;
   margin: 0.2rem 0;
   padding: 0;
@@ -37,7 +37,6 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: #54ACBF;
   width: 100%;
   margin-top: 6.875rem;
   padding-top: 0.250rem;
@@ -48,11 +47,13 @@ main .card {
   align-items: center;
   justify-content: center;
   background-color: #000;
+  border: 2px solid #F23D6D;
+  box-sizing: border-box;
   color: #F6F4F4;
   cursor: pointer;
-  width: 33.19%;
+  width: 33.2%;
   height: 20rem;
-  margin-bottom: 0.250rem;
+  margin-bottom: .2%;
   padding: 0;
   position: relative;
 }
@@ -86,7 +87,7 @@ main .card:hover .titleCard {
 
 @media (min-width: 1920px) {
   main .card {
-    height: 28rem;
+    height: 26rem;
   }
   main .card img {
     height: 100%;
@@ -101,7 +102,12 @@ main .card:hover .titleCard {
 
 @media (max-width: 720px) {
   main .card {
+    border-top: 2px solid #F23D6D;
+    border-left: none;
+    border-bottom: 2px solid #F23D6D;
+    border-right: none;
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -132,13 +138,25 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+@media (min-width: 1920px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    align-self: center;
+    justify-self: center;
+    max-width: 1920px;
+  }
+}
+
 .backgroundHeader {
   background: #F6F4F4;
   transition: .4s ease-in-out;
 }
 
 .backgroundHeader h1 {
-  color: #2A678C;
+  color: #F23D6D;
   transition: .4s ease-in-out;
 }
 
