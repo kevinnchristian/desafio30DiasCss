@@ -333,3 +333,45 @@ footer {
     transform: translate(-50%, -50%);
   }
 }
+
+
+//*-------------------------------- Dia 4 -----------------------------------*//
+#dia4 {
+  .btn {
+    background: transparent;
+    border: 4px solid;
+    border-radius: 0.25rem;
+    color: $color-circle;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    height: 4.75rem;
+    width: 25rem;
+    position: relative;
+  }
+  .btn::before, .btn::after {
+    content: "";  // utilizado junto a pseudo-elementos(que permite modificar uma parte especìfica do elemento),
+    background: $font-primary;
+    height: 0.25rem;
+    width: 1.2rem;
+    transform: skewX(50deg); // transforma a inclinação do elemento na direção horizontal no plano 2D 
+    transition: .4s linear;
+    position: absolute;
+  }
+  .btn::before {
+    top: -0.25rem;
+    left: 10%;
+  }
+  .btn::after {
+    bottom: -0.25rem;
+    right: 10%;
+  }
+  .btn:hover::before {
+    left: 90%;
+  }
+  .btn:hover::after {
+    right: 90%;
+  }
+}
