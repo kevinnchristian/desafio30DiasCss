@@ -407,3 +407,106 @@ footer p a:hover {
 #dia4 .btn:hover::after {
   right: 90%;
 }
+
+#dia5 .pulseButton {
+  background: #F23D6D;
+  border-radius: 50%;
+  color: #F6F4F4;
+  font-size: 5em;
+  font-weight: 500;
+  line-height: 20rem;
+  text-align: center;
+  text-transform: uppercase;
+  height: 20rem;
+  width: 20rem;
+  animation: animatePulsar 3s linear infinite;
+}
+
+@keyframes animatePulsar {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 61, 109, 0.7), 0 0 0 0 rgba(204, 44, 86, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 200px rgba(242, 61, 109, 0), 0 0 0 0 rgba(204, 44, 86, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 200px rgba(242, 61, 109, 0), 0 0 0 150px rgba(204, 44, 86, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 61, 109, 0), 0 0 0 150px rgba(204, 44, 86, 0);
+  }
+}
+
+#dia6 ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#dia6 ul li {
+  color: #e7e7e7;
+  font-size: 6rem;
+  list-style: none;
+  letter-spacing: 0.8rem;
+  animation: lighting 1.4s linear infinite;
+}
+
+#dia6 ul li:nth-child(1) {
+  animation-delay: 0;
+}
+
+#dia6 ul li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+#dia6 ul li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+#dia6 ul li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+#dia6 ul li:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+#dia6 ul li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+#dia6 ul li:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+#dia6 ul li:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+#dia6 ul li:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+#dia6 ul li:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+#dia6 ul li:nth-child(11) {
+  animation-delay: 1s;
+}
+
+@keyframes lighting {
+  0% {
+    color: rgba(82, 82, 82, 0.475);
+    text-shadow: none;
+  }
+  90% {
+    color: rgba(82, 82, 82, 0.475);
+    text-shadow: none;
+  }
+  100% {
+    color: #F23D6D;
+    text-shadow: 0 0 7px #F23D6D, 0 0 50px #cc2c57;
+  }
+}
