@@ -572,3 +572,57 @@ footer p a:hover {
     left: 0%;
   }
 }
+
+#dia8 .heart {
+  background: #F23D6D;
+  color: #F6F4F4;
+  height: 15rem;
+  width: 15rem;
+  transform: rotate(45deg);
+  animation: batidao 1.4s linear infinite;
+}
+
+#dia8 .heart:before {
+  content: '';
+  background: #F23D6D;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#dia8 .heart:after {
+  content: '';
+  background: #F23D6D;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes batidao {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  25% {
+    transform: rotate(45deg) scale(1);
+  }
+  30% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}

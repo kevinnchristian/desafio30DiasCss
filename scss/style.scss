@@ -557,3 +557,59 @@ footer {
     left: 0%;
   }
 }
+
+
+//*-------------------------------- Dia 8 -----------------------------------*//
+#dia8 {
+  .heart {
+    background: $color-circle;
+    color: $font-primary;
+    height: 15rem;
+    width: 15rem;
+    transform: rotate(45deg);
+    animation: batidao 1.4s linear infinite;
+  }
+  .heart:before {
+    content: '';
+    background: $color-circle;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .heart:after {
+    content: '';
+    background: $color-circle;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes batidao {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  25% {
+    transform: rotate(45deg) scale(1);
+  }
+  30% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
