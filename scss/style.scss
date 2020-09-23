@@ -724,7 +724,38 @@ footer {
 
 //*-------------------------------- Dia 11 -----------------------------------*//
 #dia11 {
-
+  .btnDia11 {
+    background: none;
+    border: 4px solid $color-circle;
+    border-radius: 4px;
+    color: $color-circle;
+    cursor: pointer;
+    font-size: 3em;
+    text-transform: uppercase;
+    padding: 1.2rem 2.2rem;
+    position: relative;
+    z-index: 10;
+    transition: all .5s;
+    overflow: hidden;
+  }
+  .btnDia11:hover {
+    color: $font-primary;
+  }
+  .btnDia11::before {
+    content: '';
+    background: $color-circle;
+    border-radius: 0 0 50% 50%;
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+  }
+  .btnDia11:hover::before {
+    height: 200%;
+  }
 }
 
 
