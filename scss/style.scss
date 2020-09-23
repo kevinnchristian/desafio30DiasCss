@@ -685,7 +685,40 @@ footer {
 
 //*-------------------------------- Dia 10 -----------------------------------*//
 #dia10 {
+  h1 {
+    display: flex;
+    align-items: center;
+    color: $font-primary;
+    font-family: 'Press Start 2P';
+    font-size: 3.5em;
+    height: 8rem;
+    margin: 0;
+    padding: 0;
+    animation: word-swith .8s infinite;
+    span::before {
+      content: '';
+      animation: word-swith .8s infinite;
+    } 
+  }
+}
 
+@keyframes word-swith {
+  0% {
+    content: '💻';
+    color: $background-face;
+  }
+  25% {
+    content: '🎮';
+    color: $rocketseat;
+  }
+  50% {
+    content: '🎬';
+    color: $color-circle;
+  }
+  100% {
+    content: '🍕';
+    color: $laranja-fome;
+  }
 }
 
 

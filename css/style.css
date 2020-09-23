@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background: #000;
   font-family: 'Roboto', sans-serif;
@@ -692,5 +693,41 @@ footer p a:hover {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+#dia10 h1 {
+  display: flex;
+  align-items: center;
+  color: #F6F4F4;
+  font-family: 'Press Start 2P';
+  font-size: 3.5em;
+  height: 8rem;
+  margin: 0;
+  padding: 0;
+  animation: word-swith .8s infinite;
+}
+
+#dia10 h1 span::before {
+  content: '';
+  animation: word-swith .8s infinite;
+}
+
+@keyframes word-swith {
+  0% {
+    content: '💻';
+    color: #3b5999;
+  }
+  25% {
+    content: '🎮';
+    color: #9466FF;
+  }
+  50% {
+    content: '🎬';
+    color: #F23D6D;
+  }
+  100% {
+    content: '🍕';
+    color: #EF5D03;
   }
 }
