@@ -767,3 +767,27 @@ footer p a:hover {
 #dia11 .btnDia11:hover::before {
   height: 200%;
 }
+
+#dia12 h1 {
+  color: rgba(246, 244, 244, 0.2);
+  font-size: 8em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#dia12 h1::before {
+  content: '#30DiasDeCSS';
+  color: #F23D6D;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: all .6s;
+}
+
+#dia12 h1:hover::before {
+  width: 100%;
+}
