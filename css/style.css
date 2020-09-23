@@ -770,6 +770,7 @@ footer p a:hover {
 
 #dia12 h1 {
   color: rgba(246, 244, 244, 0.2);
+  cursor: pointer;
   font-size: 8em;
   text-transform: uppercase;
   margin: 0;
