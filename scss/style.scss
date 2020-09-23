@@ -787,5 +787,59 @@ footer {
 
 //*-------------------------------- Dia 13 -----------------------------------*//
 #dia13 {
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      color: $font-primary;
+      font-size: 8em;
+      letter-spacing: 1.25rem;
+      animation: loading 3s linear infinite;
+    }
+    li:nth-child(1) {
+      animation-delay: 0s;
+    }
+    li:nth-child(2) {
+      animation-delay: .2s;
+    }
+    li:nth-child(3) {
+      animation-delay: .4s;
+    }
+    li:nth-child(4) {
+      animation-delay: .6s;
+    }
+    li:nth-child(5) {
+      animation-delay: .8s;
+    }
+    li:nth-child(6) {
+      animation-delay: 1s;
+    }
+    li:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+  }
+}
 
+@keyframes loading {
+  0% {
+    color: $color-circle;
+    letter-spacing: 1.25rem;
+    opacity: 0;
+    transform: translateX(-3.125rem);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    letter-spacing: -3.125rem;
+    opacity: 1;
+  }
+  100% {
+    color: $background-face;
+    letter-spacing: 1.25rem;
+    opacity: 0;
+    transform: translateX(3.125rem);
+  }
 }

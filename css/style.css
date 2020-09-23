@@ -791,3 +791,67 @@ footer p a:hover {
 #dia12 h1:hover::before {
   width: 100%;
 }
+
+#dia13 ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dia13 ul li {
+  color: #F6F4F4;
+  font-size: 8em;
+  letter-spacing: 1.25rem;
+  animation: loading 3s linear infinite;
+}
+
+#dia13 ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#dia13 ul li:nth-child(2) {
+  animation-delay: .2s;
+}
+
+#dia13 ul li:nth-child(3) {
+  animation-delay: .4s;
+}
+
+#dia13 ul li:nth-child(4) {
+  animation-delay: .6s;
+}
+
+#dia13 ul li:nth-child(5) {
+  animation-delay: .8s;
+}
+
+#dia13 ul li:nth-child(6) {
+  animation-delay: 1s;
+}
+
+#dia13 ul li:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+@keyframes loading {
+  0% {
+    color: #F23D6D;
+    letter-spacing: 1.25rem;
+    opacity: 0;
+    transform: translateX(-3.125rem);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    letter-spacing: -3.125rem;
+    opacity: 1;
+  }
+  100% {
+    color: #3b5999;
+    letter-spacing: 1.25rem;
+    opacity: 0;
+    transform: translateX(3.125rem);
+  }
+}
