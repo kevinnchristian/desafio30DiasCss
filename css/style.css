@@ -626,3 +626,71 @@ footer p a:hover {
     transform: rotate(45deg) scale(1);
   }
 }
+
+#dia9 .pendulo {
+  display: flex;
+  border-top: 20px solid #F6F4F4;
+  border-radius: 4px;
+}
+
+#dia9 .pendulo span {
+  display: block;
+  background: #F6F4F4;
+  height: 19rem;
+  width: 0.1875rem;
+  margin: -0.2rem 1.8125rem;
+  position: relative;
+  z-index: 10;
+  transform-origin: top;
+}
+
+#dia9 .pendulo span::before {
+  content: "";
+  background: #F6F4F4;
+  border-radius: 50%;
+  height: 3.75rem;
+  width: 3.75rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+#dia9 .pendulo span:first-child {
+  animation: left-arm 2s linear infinite;
+}
+
+#dia9 .pendulo span:last-child {
+  animation: right-arm 2s linear infinite 1s;
+}
+
+@keyframes left-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes right-arm {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-60deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
