@@ -856,3 +856,22 @@ footer p a:hover {
     transform: translateX(3.125rem);
   }
 }
+
+#dia14 p {
+  color: transparent;
+  background: url("../images/fundo-texto.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 10em;
+  text-transform: uppercase;
+  animation: text-background 20s linear infinite;
+}
+
+@keyframes text-background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
