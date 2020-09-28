@@ -871,5 +871,26 @@ footer {
 
 //*------------------------------- Dia 14 -----------------------------------*//
 #dia15 {
-  
+  p {
+    color: $color-circle;
+    font-size: 8em;
+    letter-spacing: 1rem;
+    text-align: center;
+    text-shadow: 0 1px 0 $font-primary,
+                 0 2px 0 $font-primary,
+                 0 3px 0 $font-primary,
+                 0 4px 0 $font-primary,
+                 0 20px 5px rgba(242, 61, 109, .25);
+    animation: float-text 3s linear infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes float-text {
+  from {
+    transform: rotate(8deg);
+  }
+  to {
+    transform: rotate(-8deg);
+  }
 }
