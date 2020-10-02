@@ -966,3 +966,52 @@ footer p a:hover {
     transform: rotateX(180deg) rotateY(180deg);
   }
 }
+
+#dia18 ul {
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#dia18 ul li {
+  color: #F23D6D;
+  font-size: 8em;
+  letter-spacing: .625rem;
+  list-style: none;
+  transition: 2s;
+}
+
+#dia18 ul:hover li {
+  transform: rotate(45deg) translateY(-12.5rem);
+  opacity: 0;
+  filter: blur(1.25rem);
+}
+
+#dia18 ul li:nth-child(1) {
+  transition-delay: 0;
+}
+
+#dia18 ul li:nth-child(2) {
+  transition-delay: .4s;
+}
+
+#dia18 ul li:nth-child(3) {
+  transition-delay: .8s;
+}
+
+#dia18 ul li:nth-child(4) {
+  transition-delay: 1.2s;
+}
+
+#dia18 ul li:nth-child(5) {
+  transition-delay: 1.6s;
+}
+
+#dia18 ul li:nth-child(6) {
+  transition-delay: 2s;
+}
+
+#dia18 ul li:nth-child(7) {
+  transition-delay: 2.4s;
+}

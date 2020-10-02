@@ -972,7 +972,45 @@ footer {
 
 //*------------------------------- Dia 18 -----------------------------------*//
 #dia18 {
-  
+  ul {
+    display: flex;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    li {
+      color: $color-circle;
+      font-size: 8em;
+      letter-spacing: .625rem;
+      list-style: none;
+      transition: 2s;
+    }
+  }
+  ul:hover li{
+    transform: rotate(45deg) translateY(-12.5rem);
+    opacity: 0;
+    filter: blur(1.25rem);
+  }
+  ul li:nth-child(1) {
+    transition-delay: 0;
+  }
+  ul li:nth-child(2) {
+    transition-delay: .4s;
+  }
+  ul li:nth-child(3) {
+    transition-delay: .8s;
+  }
+  ul li:nth-child(4) {
+    transition-delay: 1.2s;
+  }
+  ul li:nth-child(5) {
+    transition-delay: 1.6s;
+  }
+  ul li:nth-child(6) {
+    transition-delay: 2s;
+  }
+  ul li:nth-child(7) {
+    transition-delay: 2.4s;
+  }
 }
 
 //*------------------------------- Dia 19 -----------------------------------*//
