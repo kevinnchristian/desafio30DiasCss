@@ -894,3 +894,37 @@ footer p a:hover {
     transform: rotate(-8deg);
   }
 }
+
+#dia16 button {
+  background: transparent;
+  border: 2px solid #F6F4F4;
+  border-radius: .25rem;
+  color: #F6F4F4;
+  cursor: pointer;
+  font-size: 3em;
+  text-transform: uppercase;
+  padding: 2.5rem 10rem;
+  outline: none;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+#dia16 button::before {
+  content: '✔️ Dia 16';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F23D6D;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: all .5s;
+}
+
+#dia16 button:hover::before {
+  transform: translateY(0);
+}

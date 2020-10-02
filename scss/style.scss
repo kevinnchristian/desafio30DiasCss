@@ -897,12 +897,51 @@ footer {
 
 
 //*------------------------------- Dia 16 -----------------------------------*//
-
+#dia16 {
+  button {
+    background: transparent;
+    border: 2px solid $font-primary;
+    border-radius: .25rem;
+    color: $font-primary;
+    cursor: pointer;
+    font-size: 3em;
+    text-transform: uppercase;
+    padding: 2.5rem 10rem;
+    outline: none;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+  }
+  button::before {
+    content: '✔️ Dia 16';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-circle;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: all .5s;
+  }
+  button:hover::before {
+    transform: translateY(0);
+  }
+}
 
 //*------------------------------- Dia 17 -----------------------------------*//
-
+#dia17 {
+  
+}
 
 //*------------------------------- Dia 18 -----------------------------------*//
-
+#dia18 {
+  
+}
 
 //*------------------------------- Dia 19 -----------------------------------*//
+#dia19 {
+  
+}
