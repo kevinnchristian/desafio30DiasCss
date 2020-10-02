@@ -1015,5 +1015,115 @@ footer {
 
 //*------------------------------- Dia 19 -----------------------------------*//
 #dia19 {
-  
+  h1 {
+    color: $font-primary;
+    font-size: 5em;
+    position: absolute;
+    z-index: 10;
+    transition: all .8s;
+    animation: wordSwith-particle 5s linear infinite;
+  }
+  .brilho {
+    height: 35rem;
+    min-width: 35rem;
+    margin: -2.375rem;
+    position: relative;
+    z-index: 2;
+    transform-origin: right;
+    animation: corMudando 5s linear infinite;
+    span {
+      position: absolute;
+      top: calc(4rem * var(--i));
+      left: calc(4rem * var(--i));
+      bottom: calc(4rem * var(--i));
+      right: calc(4rem * var(--i));
+    }
+    span:before {
+      content: '';
+      background: $color-circle;
+      border-radius: 50%;
+      height: 1rem;
+      width: 1rem;
+      position: absolute;
+      top: 1rem;
+      left: -0.5rem;
+    }
+  }
+  .brilho:nth-child(even) {
+    transform-origin: left;
+  }
+  .brilho span:nth-child(3n + 1):before {
+    background: rgba(242, 61, 109, 1);
+    box-shadow: 0 0 20px rgba(242, 61, 109, 1),
+                0 0 40px rgba(242, 61, 109, 1),
+                0 0 60px rgba(242, 61, 109, 1),
+                0 0 80px rgba(242, 61, 109, 1),
+                0 0 0 8px rgba(242, 61, 109, .1),
+  }
+  .brilho span:nth-child(3n + 2):before {
+    background: rgba(148, 102, 255, 1);
+    box-shadow: 0 0 20px rgba(148, 102, 255, 1),
+                0 0 40px rgba(148, 102, 255, 1),
+                0 0 60px rgba(148, 102, 255, 1),
+                0 0 80px rgba(148, 102, 255, 1),
+                0 0 0 8px rgba(148, 102, 255, .1);
+  }
+  .brilho span:nth-child(3n + 3):before {
+    background: rgba(59, 89, 153, 1);
+    box-shadow: 0 0 20px rgba(59, 89, 153, 1),
+                0 0 40px rgba(59, 89, 153, 1),
+                0 0 60px rgba(59, 89, 153, 1),
+                0 0 80px rgba(59, 89, 153, 1),
+                0 0 0 8px rgba(59, 89, 153, .1);
+  }
+  .brilho span:nth-child(3n+1) {
+    animation: animateParticle 8s alternate infinite;
+  }
+  .brilho span:nth-child(3n+2) {
+    animation: animateParticle-reverse 3s alternate infinite;
+  }
+  .brilho span:nth-child(3n+3) {
+    animation: animateParticle 8s alternate infinite;
+  }
+}
+
+@keyframes wordSwith-particle {
+  0% {
+    color: rgba(242, 61, 109, 1);
+  }
+  50% {
+    color: rgba(148, 102, 255, 1);
+  }
+  100% {
+    color: rgba(59, 89, 153, 1);
+  }
+}
+
+@keyframes corMudando {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateParticle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateParticle-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
