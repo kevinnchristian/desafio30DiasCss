@@ -1127,3 +1127,44 @@ footer {
     transform: rotate(0deg);
   }
 }
+
+//*------------------------------- Dia 20 -----------------------------------*//
+#dia20 {
+  a {
+    border: 0.1875rem solid $font-primary;
+    border-radius: 0.25rem;
+    color: $font-primary;
+    font-size: 3em;
+    text-decoration: none;
+    padding: 1.875rem 4.375rem;
+    position: relative;
+    overflow: hidden;
+  }
+  a:hover {
+    background-color: $color-circle;
+  }
+  a::before {
+    content: '';
+    background-color: $font-primary;
+    height: 3.125rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s;
+  }
+  a:hover::before {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+//*------------------------------- Dia 21 -----------------------------------*//
+#dia21 {
+  
+}
+
+//*------------------------------- Dia 22 -----------------------------------*//
+#dia22 {
+  
+}
