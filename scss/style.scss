@@ -1161,8 +1161,53 @@ footer {
 
 //*------------------------------- Dia 21 -----------------------------------*//
 #dia21 {
-  
+  ul {
+    display: flex;
+    border-bottom: 1rem solid $color-circle;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    margin: 0;
+    padding: 0;
+    li {
+      background: $color-circle;
+      border-radius: 50%;
+      list-style: none;
+      height: 5rem;
+      width: 5rem;
+      margin: 0 0.625rem;
+      animation: jumpingCircles 1s linear infinite;
+    }
+
+    li:nth-child(1) {
+      animation-delay: 0.45s;
+    }
+    li:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+    li:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    li:nth-child(4) {
+      animation-delay: 0s;
+    }
+    li:nth-child(5) {
+      animation-delay: 0.1s;
+    }
+  }
 }
+
+@keyframes jumpingCircles {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9.375rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 //*------------------------------- Dia 22 -----------------------------------*//
 #dia22 {
