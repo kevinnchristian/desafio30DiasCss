@@ -914,3 +914,66 @@ footer {
     transform: translateY(-9.375rem); }
   100% {
     transform: translateY(0); } }
+
+#dia22 ul {
+  display: flex;
+  margin: 0;
+  padding: 0; }
+  #dia22 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.125rem solid #F23D6D;
+    border-radius: 50%;
+    cursor: pointer;
+    list-style-type: none;
+    height: 8rem;
+    width: 8rem;
+    margin: 0 1.25rem;
+    position: relative;
+    transition: all .5s; }
+    #dia22 ul li i {
+      font-size: 3em;
+      color: #F23D6D;
+      transition: .5s;
+      z-index: 10; }
+  #dia22 ul li::before {
+    content: '';
+    background: #F23D6D;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: all .5s; }
+  #dia22 ul li:hover::before {
+    opacity: 1;
+    transform: scale(0.8); }
+  #dia22 ul li::after {
+    content: '';
+    background: transparent;
+    border: 0.125rem dashed #F23D6D;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: all .5s; }
+  #dia22 ul li:hover::after {
+    opacity: 1;
+    animation: rotatingCircle 10s linear infinite; }
+  #dia22 ul li:hover i {
+    color: #F6F4F4; }
+
+@keyframes rotatingCircle {
+  0% {
+    transform: scale(0.9) rotate(0deg); }
+  100% {
+    transform: scale(0.9) rotate(360deg); } }

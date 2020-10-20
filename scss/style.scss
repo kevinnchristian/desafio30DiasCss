@@ -1211,5 +1211,77 @@ footer {
 
 //*------------------------------- Dia 22 -----------------------------------*//
 #dia22 {
-  
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.125rem solid $color-circle;
+      border-radius: 50%;
+      cursor: pointer;
+      list-style-type: none;
+      height: 8rem;
+      width: 8rem;
+      margin: 0 1.25rem;
+      position: relative;
+      transition: all .5s;
+      i {
+        font-size: 3em;
+        color: $color-circle;
+        transition: .5s;
+        z-index: 10;
+      }
+    }
+    li::before {
+      content: '';
+      background: $color-circle;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: all .5s;
+    }
+    li:hover::before {
+      opacity: 1;
+      transform: scale(0.8);
+    }
+    li::after {
+      content: '';
+      background: transparent;
+      border: 0.125rem dashed $color-circle;
+      border-radius: 50%;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: all .5s;
+    }
+    li:hover::after {
+      opacity: 1;
+      animation: rotatingCircle 10s linear infinite;
+    }
+    li:hover i {
+      color: $font-primary;
+    }
+  }
+}
+
+@keyframes rotatingCircle {
+  0% {
+    transform: scale(0.90) rotate(0deg);
+  }
+  100% {
+    transform: scale(0.90) rotate(360deg);
+  }
 }
