@@ -1285,3 +1285,39 @@ footer {
     transform: scale(0.90) rotate(360deg);
   }
 }
+
+
+//*------------------------------- Dia 23 -----------------------------------*//
+#dia23 {
+  a {
+    border: 0.1875rem solid $font-primary;
+    border-radius: 0.25rem;
+    color: $font-primary;
+    font-size: 3em;
+    text-decoration: none;
+    padding: 1.875rem 4.375rem;
+    transition: all .3s;
+  }
+  a:hover {
+    border: 0.1875rem solid $color-circle;
+    color: $color-circle;
+    animation: shake .3s linear 1;
+  }
+}
+
+@keyframes shake {
+  33% {
+    transform: rotate(10deg);
+  }
+  66% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+//*------------------------------- Dia 24 -----------------------------------*//
+#dia24 {
+  
+}

@@ -977,3 +977,25 @@ footer {
     transform: scale(0.9) rotate(0deg); }
   100% {
     transform: scale(0.9) rotate(360deg); } }
+
+#dia23 a {
+  border: 0.1875rem solid #F6F4F4;
+  border-radius: 0.25rem;
+  color: #F6F4F4;
+  font-size: 3em;
+  text-decoration: none;
+  padding: 1.875rem 4.375rem;
+  transition: all .3s; }
+
+#dia23 a:hover {
+  border: 0.1875rem solid #F23D6D;
+  color: #F23D6D;
+  animation: shake .3s linear 1; }
+
+@keyframes shake {
+  33% {
+    transform: rotate(10deg); }
+  66% {
+    transform: rotate(-10deg); }
+  100% {
+    transform: rotate(10deg); } }
