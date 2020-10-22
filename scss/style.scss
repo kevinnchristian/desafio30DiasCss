@@ -1532,3 +1532,81 @@ footer {
     left: 0;
   }
 }
+
+
+//*------------------------------- Dia 27 -----------------------------------*//
+#dia27 {
+  .pulseCall {
+    background: $color-circle;
+    border-radius: 50%;
+    color: $font-primary;
+    font-size: 5em;
+    height: 9.375rem;
+    width: 9.375rem;
+    position: relative;
+  }
+  .pulseCall::before, .pulseCall::after {
+    content: '';
+    border: 0.180rem solid $color-circle;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.25rem;
+    left: -1.25rem;
+    bottom: -1.25rem;
+    right: -1.25rem;
+    animation: pulseCall 1.5s linear infinite;
+  }
+  .fas::before, .faz::after {
+    position: absolute;
+    top: 2.2rem;
+    left: 2.2rem;
+    animation: movePhone 1.5s linear infinite;
+  }
+  .pulseCall::after, .faz::after {
+    animation-delay: .5s;
+  }
+}
+
+@keyframes pulseCall {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes movePhone {
+  0% {
+    transform: rotate(-5deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(-20deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(-5deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(-20deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+
+//*------------------------------- Dia 28 -----------------------------------*//
+#dia28 {
+
+}
