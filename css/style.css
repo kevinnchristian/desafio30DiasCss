@@ -1217,3 +1217,35 @@ footer {
   100% {
     transform: rotate(-5deg);
     opacity: 0; } }
+
+#dia28 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation: backgroundAnimate 10s infinite; }
+  #dia28 section h2, #dia28 section h4 {
+    color: #F6F4F4;
+    text-shadow: -4px 4px 2px #000;
+    margin: 0;
+    padding: 0; }
+  #dia28 section h2 {
+    font-size: 3em; }
+  #dia28 section h4 {
+    font-size: 2em; }
+
+@keyframes backgroundAnimate {
+  0% {
+    background: #000; }
+  20% {
+    background: #3b5999; }
+  40% {
+    background: #F23D6D; }
+  60% {
+    background: #9466FF; }
+  80% {
+    background: #e7e7e7; }
+  100% {
+    background: #000; } }

@@ -1608,5 +1608,46 @@ footer {
 
 //*------------------------------- Dia 28 -----------------------------------*//
 #dia28 {
+  section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    animation: backgroundAnimate 10s infinite;
+    h2, h4 {
+      color: $font-primary;
+      text-shadow: -4px 4px 2px $background-primary;
+      margin: 0;
+      padding: 0;
+    }
+    h2 {
+      font-size: 3em;
+    }
+    h4 {
+      font-size: 2em;
+    }
+  }
+}
 
+@keyframes backgroundAnimate {
+  0% {
+    background: $background-primary;
+  }
+  20% {
+    background: $background-face;
+  }
+  40% {
+    background: $color-circle;
+  }
+  60% {
+    background: $rocketseat;
+  }
+  80% {
+    background: $background-circle;
+  }
+  100% {
+    background: $background-primary;
+  }
 }
