@@ -1651,3 +1651,81 @@ footer {
     background: $background-primary;
   }
 }
+
+
+//*------------------------------- Dia 29 -----------------------------------*//
+#dia29 {
+  nav {
+    align-self: start;
+    border-bottom: 0.125rem solid $color-circle;
+    text-align: right;
+    line-height: 3.375rem;
+    height: 3.375rem;
+    width: 100%;
+    label {
+      display: none;
+      color: $background-circle;
+      float: right;
+      font-size: 2.2em;
+      text-align: center;
+      line-height: 2.2rem;
+      height: 2.2rem;
+      width: 2.2rem;
+      margin: 0 1.5rem 1.3rem 0;
+    }
+    #toggle {
+      display: none;
+    }
+    .menu {
+      margin: 0 1.875rem 0 0;
+      a {
+        clear: right;
+        color: $background-circle;
+        text-decoration: none;
+        margin: 0 0.625rem;
+      }
+      span {
+        color: $background-circle;
+      }
+      a:hover, span:hover {
+        color: $color-circle;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .headerDias {
+    padding: 0.5rem 0;
+  }
+  h1 {
+    display: none;
+  }
+  #dia29 {
+    nav {
+      label {
+        display: block;
+        cursor: pointer;
+      }
+      .menu {
+        display: none;
+        text-align: center;
+        width: 100%;
+      }
+      .menu a {
+        display: block;
+        border-bottom: 0.125rem solid rgba(242, 61, 109, .6);
+        margin: 0 1rem;
+      }
+      #toggle:checked + .menu {
+        display: block;
+      }
+    }
+  }
+}
+
+
+//*------------------------------- Dia 30 -----------------------------------*//
+#dia30 {
+  
+}

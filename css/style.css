@@ -1249,3 +1249,53 @@ footer {
     background: #e7e7e7; }
   100% {
     background: #000; } }
+
+#dia29 nav {
+  align-self: start;
+  border-bottom: 0.125rem solid #F23D6D;
+  text-align: right;
+  line-height: 3.375rem;
+  height: 3.375rem;
+  width: 100%; }
+  #dia29 nav label {
+    display: none;
+    color: #e7e7e7;
+    float: right;
+    font-size: 2.2em;
+    text-align: center;
+    line-height: 2.2rem;
+    height: 2.2rem;
+    width: 2.2rem;
+    margin: 0 1.5rem 1.3rem 0; }
+  #dia29 nav #toggle {
+    display: none; }
+  #dia29 nav .menu {
+    margin: 0 1.875rem 0 0; }
+    #dia29 nav .menu a {
+      clear: right;
+      color: #e7e7e7;
+      text-decoration: none;
+      margin: 0 0.625rem; }
+    #dia29 nav .menu span {
+      color: #e7e7e7; }
+    #dia29 nav .menu a:hover, #dia29 nav .menu span:hover {
+      color: #F23D6D; }
+
+@media only screen and (max-width: 500px) {
+  .headerDias {
+    padding: 0.5rem 0; }
+  h1 {
+    display: none; }
+  #dia29 nav label {
+    display: block;
+    cursor: pointer; }
+  #dia29 nav .menu {
+    display: none;
+    text-align: center;
+    width: 100%; }
+  #dia29 nav .menu a {
+    display: block;
+    border-bottom: 0.125rem solid rgba(242, 61, 109, 0.6);
+    margin: 0 1rem; }
+  #dia29 nav #toggle:checked + .menu {
+    display: block; } }
