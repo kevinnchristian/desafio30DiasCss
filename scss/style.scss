@@ -1727,5 +1727,118 @@ footer {
 
 //*------------------------------- Dia 30 -----------------------------------*//
 #dia30 {
-  
+  .firework {
+    position: absolute;
+  }
+  .explosion {
+    height: 5rem;
+    width: 0.25rem;
+    position: absolute;
+    left: -0.125rem;
+    bottom: 0;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+  }
+  .explosion:nth-child(1) {
+    transform: rotate(0deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(2) {
+    transform: rotate(30deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(3) {
+    transform: rotate(60deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(4) {
+    transform: rotate(90deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(5) {
+    transform: rotate(120deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(6) {
+    transform: rotate(150deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(7) {
+    transform: rotate(180deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(8) {
+    transform: rotate(210deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(9) {
+    transform: rotate(240deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(10) {
+    transform: rotate(270deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(11) {
+    transform: rotate(300deg) translateY(-0.9375rem);
+  }
+  .explosion:nth-child(12) {
+    transform: rotate(330deg) translateY(-0.9375rem);
+  }
+  .explosion::before {
+    content: '';
+    background:  $color-circle;
+    height: 2.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  #firework1 {
+    top: 30%;
+    left: 30%;
+    transform: scale(1);
+  }
+  #firework1 .explosion::before {
+    animation: explosion 2s ease-in-out infinite;
+  }
+  #firework2 {
+    top: 45%;
+    left: 45%;
+    transform: scale(.7);
+  }
+  #firework2 .explosion::before {
+    animation: explosion 2s 1s ease-in-out infinite;
+  }
+  #firework3 {
+    top: 70%;
+    left: 30%;
+    transform: scale(.4);
+  }
+  #firework3 .explosion::before {
+    animation: explosion 2s .8s ease-in-out infinite;
+  }
+  #firework4 {
+    top: 70%;
+    left: 75%;
+    transform: scale(1);
+  }
+  #firework4 .explosion::before {
+    animation: explosion 2s .6s ease-in-out infinite;
+  }
+  #firework5 {
+    top: 50%;
+    left: 55%;
+    transform: scale(.7);
+  }
+  #firework5 .explosion::before {
+    animation: explosion 2s .4s ease-in-out infinite;
+  }
+  #firework6 {
+    top: 30%;
+    left: 75%;
+    transform: scale(.4);
+  }
+  #firework6 .explosion::before {
+    animation: explosion 2s .2s ease-in-out infinite;
+  }
+}
+
+@keyframes explosion {
+  0% {
+    top: 100%;
+  }
+  33%, 100% {
+    top: -50%;
+  }
 }
