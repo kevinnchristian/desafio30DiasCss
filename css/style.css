@@ -1410,3 +1410,39 @@ footer {
     top: 100%; }
   33%, 100% {
     top: -50%; } }
+
+#dia31 input[type='checkbox'] {
+  width: 0;
+  height: 0;
+  visibility: hidden; }
+
+#dia31 label {
+  width: 18rem;
+  height: 8.5rem;
+  background-color: #F23D6D;
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: .5s;
+  box-shadow: 0 0 1.25rem #f23d6d80; }
+
+#dia31 label::after {
+  content: "";
+  width: 8rem;
+  height: 7.5rem;
+  background-color: #F6F4F4;
+  position: absolute;
+  border-radius: 0.5rem;
+  top: 0.5rem;
+  left: 0.5rem;
+  transition: .5s; }
+
+#dia31 input:checked + label:after {
+  left: calc(100% - 0.5rem);
+  transform: translateX(-100%); }
+
+#dia31 input:checked + label {
+  background-color: #bd2950; }
+
+#dia31 label:active:after {
+  width: 9.5rem; }

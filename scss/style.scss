@@ -1842,3 +1842,49 @@ footer {
     top: -50%;
   }
 }
+
+
+//*------------------------------- Dia 31 -----------------------------------*//
+#dia31 {
+  input[type='checkbox'] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  label {
+    width: 18rem;
+    height: 8.5rem;
+    background-color: $color-circle;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 0 0 1.25rem #f23d6d80;
+  }
+
+  label::after {
+    content: "";
+    width: 8rem;
+    height: 7.5rem;
+    background-color: $font-primary;
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 0.5rem;
+    left: 0.5rem;
+    transition: .5s;
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 0.5rem);
+    transform: translateX(-100%);
+  }
+
+  input:checked + label {
+    background-color: #bd2950;
+  }
+
+  label:active:after {
+    width: 9.5rem;
+  }
+}
