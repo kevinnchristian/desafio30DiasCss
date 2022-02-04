@@ -2045,3 +2045,129 @@ footer {
     height: 78rem;
   }
 }
+
+//*------------------------------- Dia 33 -----------------------------------*//
+#dia33 {
+  background: url("../images/card_css_3d_background.jpg");
+  background-size: cover;
+  height: 37rem;
+
+  .main-card {
+    display: grid;
+    grid-template-columns: 15rem;
+    grid-template-rows: 10.5rem 10.5rem;
+    grid-template-areas: "image" "text";
+
+    border-radius: .8rem;
+    background: $color-dark-grey;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0,0,0,0.9);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    margin: .8rem;
+    transform-style: preserve-3d;
+    transform: perspective(62.5rem);
+
+    .card-image {
+      grid-area: image;
+      background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/card_css_3d_1.jpg");
+      border-top-left-radius: .8rem;
+      border-top-right-radius: .8rem;
+      background-size: cover;
+    }
+
+    .card2-image {
+      grid-area: image;
+      background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/card_css_3d_2.jpg");
+      border-top-left-radius: .8rem;
+      border-top-right-radius: .8rem;
+      background-size: cover;
+    }
+
+    .card3-image {
+      grid-area: image;
+      background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("../images/card_css_3d_3.jpg");
+      border-top-left-radius: .8rem;
+      border-top-right-radius: .8rem;
+      background-size: cover;
+    }
+  
+    .card-text {
+      grid-area: text;
+      margin: 1.2rem;
+      transform: translateZ(1.8rem);
+    }
+
+    .card-text .date {
+      color: $color-circle;
+      font-size: .8rem;
+    }
+
+    .card2-text .date {
+      color: $laranja-fome;
+    }
+
+    .card3-text .date {
+      color: $background-second;
+    }
+
+    .card-text h2 {
+      color: $font-primary;
+      font-size: 1.4rem;
+      margin-top: 0;
+      margin-bottom: .4rem;
+    }
+  
+    .card-text p {
+      color: $font-primary;
+      font-size: .71rem;
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  .rgb::after {
+    content:"";
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    border-radius: .7rem;
+    filter: blur(.5rem);
+    position: absolute;
+    inset: .1875rem;
+    transform: translateZ(-.0625rem);
+    animation: rgb 3s linear infinite;
+  }
+
+  .js-tilt-glare {
+    border-radius: .7rem;
+  }
+}
+
+@keyframes rgb {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@media (max-width: 796.5px) {
+  #dia33 {
+    height: 52rem;
+  }
+}
+
+@media (max-width: 530px) {
+  #dia33 {
+    height: 78rem;
+  }
+}
