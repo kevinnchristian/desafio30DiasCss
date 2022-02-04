@@ -30,7 +30,7 @@ header {
 main {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 6.875rem;
@@ -44,13 +44,16 @@ main {
     box-sizing: border-box;
     color: #F6F4F4;
     cursor: pointer;
-    width: 33.2%;
-    height: 20rem;
+    width: 30%;
+    height: 18rem;
+    margin-left: .1%;
+    margin-right: .1%;
     margin-bottom: .2%;
     padding: 0;
     position: relative; }
     main .card img {
-      width: 100%; }
+      height: 65%;
+      width: 65%; }
     main .card .titleCard {
       display: flex;
       justify-content: center;
@@ -74,18 +77,28 @@ main {
     main .card {
       height: 26rem; }
       main .card img {
-        height: 100%; } }
-  @media (max-width: 915px) {
+        height: 65%;
+        width: 65%; } }
+  @media (max-width: 960px) {
     main .card {
-      width: 49.8%; } }
+      width: 49.4%; } }
   @media (max-width: 720px) {
     main .card {
       border-top: 2px solid #F23D6D;
-      border-left: none;
       border-bottom: 2px solid #F23D6D;
-      border-right: none;
-      width: 100%;
-      margin-bottom: 0; } }
+      width: 70%; }
+      main .card img {
+        height: 70%;
+        width: 70%; } }
+  @media (max-width: 600px) {
+    main .card {
+      width: 85%; }
+      main .card img {
+        height: 55%;
+        width: 55%; } }
+  @media (max-width: 470px) {
+    main .card {
+      width: 95%; } }
 
 footer {
   display: flex;
@@ -1446,3 +1459,95 @@ footer {
 
 #dia31 label:active:after {
   width: 9.5rem; }
+
+#dia32 {
+  background: url("../images/card_css_3d_background.jpg");
+  background-size: cover;
+  height: 37rem; }
+  #dia32 .main-card {
+    display: grid;
+    grid-template-columns: 15rem;
+    grid-template-rows: 10.5rem 9rem 3.2rem;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: .8rem;
+    background: #F6F4F4;
+    box-shadow: 0.3125rem 0.3125rem 0.9375rem rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin: .8rem;
+    transform-style: preserve-3d;
+    transform: perspective(62.5rem); }
+    #dia32 .main-card .card-image {
+      grid-area: image;
+      background: url("../images/card_css_3d_1.jpg");
+      border-top-left-radius: .8rem;
+      border-top-right-radius: .8rem;
+      background-size: cover; }
+    #dia32 .main-card .card2-image {
+      grid-area: image;
+      background: url("../images/card_css_3d_2.jpg");
+      border-top-left-radius: .8rem;
+      border-top-right-radius: .8rem;
+      background-size: cover; }
+    #dia32 .main-card .card3-image {
+      grid-area: image;
+      background: url("../images/card_css_3d_3.jpg");
+      border-top-left-radius: .8rem;
+      border-top-right-radius: .8rem;
+      background-size: cover; }
+    #dia32 .main-card .card-text {
+      grid-area: text;
+      margin: 1rem;
+      transform: translateZ(1.8rem); }
+    #dia32 .main-card .card-text .date {
+      color: #F23D6D;
+      font-size: .8rem; }
+    #dia32 .main-card .card2-text .date {
+      color: #EF5D03; }
+    #dia32 .main-card .card3-text .date {
+      color: #54ACBF; }
+    #dia32 .main-card .card-text h2 {
+      margin-top: 0;
+      margin-bottom: .4rem;
+      font-size: 1.4rem; }
+    #dia32 .main-card .card-text p {
+      color: #a7a4a4;
+      font-size: .8rem;
+      font-weight: 300;
+      margin: 0; }
+    #dia32 .main-card .card-stats {
+      grid-area: stats;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      border-bottom-left-radius: .7rem;
+      border-bottom-right-radius: .7rem;
+      background: #F23D6D; }
+    #dia32 .main-card .card2-stats {
+      background: #EF5D03; }
+    #dia32 .main-card .card3-stats {
+      background: #54ACBF; }
+    #dia32 .main-card .card-stats .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #F6F4F4;
+      padding: .2rem; }
+    #dia32 .main-card .card-stats .stat .value {
+      font-size: 1rem;
+      font-weight: 500; }
+    #dia32 .main-card .card-stats .stat .type {
+      font-size: .6rem;
+      font-weight: 300; }
+  #dia32 .js-tilt-glare {
+    border-radius: .7rem; }
+
+@media (max-width: 796.5px) {
+  #dia32 {
+    height: 52rem; } }
+
+@media (max-width: 530px) {
+  #dia32 {
+    height: 78rem; } }
